@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSGB Fiyat Talep Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }  
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .container h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn {
+            display: inline-block;
+            background: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fiyat Talep Formu</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="companyName">Firma Adı</label>
+                <input type="text" id="companyName" name="companyName" placeholder="Firma adınızı girin" required>
+            </div>
+            <div class="form-group">
+                <label for="contactPerson">Yetkili Kişi</label>
+                <input type="text" id="contactPerson" name="contactPerson" placeholder="Yetkili kişi adını girin" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta Adresi</label>
+                <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon Numarası</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telefon numaranızı girin" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeCount">Çalışan Sayısı</label>
+                <input type="number" id="employeeCount" name="employeeCount" placeholder="Toplam çalışan sayısını girin" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Ek Bilgiler</label>
+                <textarea id="message" name="message" placeholder="İhtiyaçlarınızı veya notlarınızı yazın"></textarea>
+            </div>
+            <button type="submit" class="btn">Gönder</button>
+        </form>
+    </div>
+</body>
+</html>
+//test
